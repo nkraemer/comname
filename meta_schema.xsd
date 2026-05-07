@@ -27,7 +27,7 @@ validated yet
 
   <xs:simpleType name="FileCharSet">
     <xs:restriction base="xs:string">
-      <xs:pattern value="[^:?/\\*|:;\[\]$%{}&gt;&lt;&quot;]+" />
+      <xs:pattern value="[^:?/\\*|;\[\]$%{}&gt;&lt;&quot;]+" />
     </xs:restriction>
   </xs:simpleType>
 
@@ -184,13 +184,13 @@ validated yet
     <xs:sequence>
       <xs:element name="Description" type="xs:string" minOccurs="0" />
     </xs:sequence>
-    <xs:attribute name="dataTypeId" type="xs:string" use="required" />
+    <xs:attribute name="dataTypeId" type="FileCharSet" use="required" />
     <xs:attribute name="fullName" type="xs:string" use="required" />
   </xs:complexType>
 
   <xs:complexType name="GenericType">
     <xs:sequence>
-      <xs:element name="Description" type="xs:string" minOccurs="0" />
+      <xs:element name="Description" type="FileCharSet" minOccurs="0" />
     </xs:sequence>
     <xs:attribute name="genericType" type="xs:string" use="required" />
   </xs:complexType>

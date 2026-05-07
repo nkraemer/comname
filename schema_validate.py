@@ -19,6 +19,7 @@ if not schema_xml.exists():
     sys.exit(1)
 
 schema = xmlschema.XMLSchema11(meta_schema)
-schema.validate(open(schema_xml))
+
+schema.validate(schema_xml)
 
 print("Validation Passed")

@@ -1,7 +1,9 @@
 from lxml.etree import Element as Elem
 from lxml import etree
 
-root = Elem("COMNAME", version="2025", xmlns="http://ieee.org/c37.232-2025/schema")
+root = Elem(
+    "COMNAME", version="2025", nsmap={None: "http://ieee.org/c37.232-2025/schema"}
+)
 
 
 # delimiter
@@ -10,9 +12,9 @@ delim.text = ","
 root.append(delim)
 
 # Escape
-delim = Elem("EscapeChar")
-delim.text = "^"
-root.append(delim)
+esc = Elem("EscapeChar")
+esc.text = "^"
+root.append(esc)
 
 fields = Elem("FileFields")
 root.append(fields)
@@ -36,16 +38,16 @@ devices = Elem("Devices")
 devices.extend([device1, device2])
 fields.append(devices)
 
-# companys
+# companyies
 company1 = Elem("Company", companyId="acme", fullName="ACME Inc.")
 company2 = Elem(
     "Company",
     companyId="mega",
     fullName="Megacorp",
 )
-companys = Elem("Companies")
-companys.extend([company1, company2])
-fields.append(companys)
+companyies = Elem("Companies")
+companyies.extend([company1, company2])
+fields.append(companyies)
 
 
 # Duration
@@ -64,7 +66,7 @@ trig_typ4.append(desc_elem)
 trig_typs.extend([trig_typ1, trig_typ2, trig_typ3, trig_typ4])
 fields.append(trig_typs)
 
-# Trig type
+# Data type
 data_typs = Elem("DataTypes")
 dtypes = {
     "pmu": ("Synchrophasor", "IEEE C37.118-2011.1"),
@@ -108,7 +110,7 @@ root.append(folders)
 
 # private
 private_elem = Elem(
-    "SamplePrivateElement", xmlns="http://megacorp.com/unique_namespace"
+    "SamplePrivateElement", nsmap={None: "http://megacorp.com/unique_namespace"}
 )
 root.append(private_elem)
 

@@ -5,8 +5,8 @@ This repo focuses on schema generation and validation
 
 ## Getting Started
 
-1. (optional) create and activate your python virtual enviornment 
-2. `py -m pip install -r requirments.txt`
+1. (optional) create and activate your python virtual environment 
+2. `py -m pip install -r requirements.txt`
 3. `py schema_gen.py` -> create a schema file
 4. `py schema_validate.py` -> validate the schema you just created against the meta_schema
 
@@ -14,5 +14,5 @@ This repo focuses on schema generation and validation
 
 Automated testing
 
-# Acknowledgements
-This work is part of the larger COMNAME project organiced by the IEEE PES PSRC H52 Working Group.
+## Acknowledgements
+This work is part of the larger COMNAME project organized by the IEEE PES PSRC H52 Working Group.
