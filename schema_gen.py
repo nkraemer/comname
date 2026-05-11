@@ -20,7 +20,7 @@ fields = Elem("FileFields")
 root.append(fields)
 
 # Time stuff
-startdate = Elem("StartDate")
+startdate = Elem("StartDate", dateFormat="ccyymmdd")
 startime = Elem("StartTime")
 timecode = Elem("TimeCode")
 fields.extend([startdate, startime, timecode])

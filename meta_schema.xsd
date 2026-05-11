@@ -88,7 +88,7 @@ validated yet
   <xs:complexType name="FileFieldsType">
     <xs:all>
       <!-- Kept as xs:string so self-closing placeholders validate -->
-      <xs:element name="StartDate" type="xs:string" />
+      <xs:element name="StartDate" type="StartDateType" />
       <xs:element name="StartTime" type="xs:string" />
       <xs:element name="TimeCode" type="xs:string" />
 
@@ -126,6 +126,19 @@ validated yet
       not(exists(tns:GeoLocationIso6709) or exists(tns:GeoLocationLat) or exists(tns:GeoLocationLon))
     " />
   </xs:complexType>
+
+  <xs:complexType name="StartDateType">
+    <xs:attribute name="dateFormat" type="DateFormatType" use="required" />
+  </xs:complexType>
+
+
+  <xs:simpleType name="DateFormatType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ccyymmdd" />
+      <xs:enumeration value="yymmdd" />
+    </xs:restriction>
+  </xs:simpleType>
+
 
   <xs:complexType name="StationsType">
     <xs:sequence>
