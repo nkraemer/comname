@@ -89,7 +89,7 @@ validated yet
     <xs:all>
       <!-- Kept as xs:string so self-closing placeholders validate -->
       <xs:element name="StartDate" type="StartDateType" />
-      <xs:element name="StartTime" type="xs:string" />
+      <xs:element name="StartTime" type="TimeType" />
       <xs:element name="TimeCode" type="xs:string" />
 
       <xs:element name="Stations" type="StationsType" />
@@ -139,6 +139,15 @@ validated yet
     </xs:restriction>
   </xs:simpleType>
 
+  <xs:complexType name="TimeType">
+    <xs:attribute name="timeFormat" type="TimeFormatType" use="required" />
+  </xs:complexType>
+
+  <xs:simpleType name="TimeFormatType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="HHMM(SSp[0-9])?" />
+    </xs:restriction>
+  </xs:simpleType>
 
   <xs:complexType name="StationsType">
     <xs:sequence>

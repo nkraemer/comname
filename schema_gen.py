@@ -21,7 +21,7 @@ root.append(fields)
 
 # Time stuff
 startdate = Elem("StartDate", dateFormat="ccyymmdd")
-startime = Elem("StartTime")
+startime = Elem("StartTime", timeFormat="HHMMSSp6")
 timecode = Elem("TimeCode")
 fields.extend([startdate, startime, timecode])
 
