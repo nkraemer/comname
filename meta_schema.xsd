@@ -151,7 +151,7 @@ validated yet
 
   <xs:complexType name="StationsType">
     <xs:sequence>
-      <xs:element name="Station" type="StationType" minOccurs="1" maxOccurs="unbounded" />
+      <xs:element name="Station" type="StationType" minOccurs="0" maxOccurs="unbounded" />
     </xs:sequence>
   </xs:complexType>
 
@@ -162,7 +162,7 @@ validated yet
 
   <xs:complexType name="DevicesType">
     <xs:sequence>
-      <xs:element name="Device" type="DeviceType" minOccurs="1" maxOccurs="unbounded" />
+      <xs:element name="Device" type="DeviceType" minOccurs="0" maxOccurs="unbounded" />
     </xs:sequence>
   </xs:complexType>
 
@@ -173,7 +173,7 @@ validated yet
 
   <xs:complexType name="CompaniesType">
     <xs:sequence>
-      <xs:element name="Company" type="CompanyType" minOccurs="1" maxOccurs="unbounded" />
+      <xs:element name="Company" type="CompanyType" minOccurs="0" maxOccurs="unbounded" />
     </xs:sequence>
   </xs:complexType>
 
@@ -184,7 +184,7 @@ validated yet
 
   <xs:complexType name="TrigTypesType">
     <xs:sequence>
-      <xs:element name="TrigType" type="TrigTypeType" minOccurs="1" maxOccurs="unbounded" />
+      <xs:element name="TrigType" type="TrigTypeType" minOccurs="0" maxOccurs="unbounded" />
     </xs:sequence>
   </xs:complexType>
 
@@ -241,8 +241,8 @@ validated yet
       <xs:element name="MMSS" type="xs:string" />
       <xs:element name="MM" type="xs:string" />
       <xs:element name="SS" type="xs:string" />
-      <xs:element name="StationId" type="xs:string" />
-      <xs:element name="DeviceId" type="xs:string" />
+      <xs:element name="Station" type="xs:string" />
+      <xs:element name="Device" type="xs:string" />
       <xs:element name="DataType" type="xs:string" />
       <xs:element name="TrigType" type="xs:string" />
       <xs:element name="Company" type="xs:string" />
