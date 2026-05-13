@@ -104,8 +104,8 @@ validated yet
       <xs:element name="DataTypes" type="DataTypesType" minOccurs="0" />
 
       <xs:element name="GeoLocationIso6709" type="xs:string" minOccurs="0" />
-      <xs:element name="GeoLocationLat" type="xs:string" minOccurs="0" />
-      <xs:element name="GeoLocationLon" type="xs:string" minOccurs="0" />
+      <xs:element name="GeoLocationLatitude" type="xs:string" minOccurs="0" />
+      <xs:element name="GeoLocationLongitude" type="xs:string" minOccurs="0" />
 
       <xs:element name="Generic" type="GenericType" minOccurs="0" maxOccurs="unbounded" />
     </xs:all>
